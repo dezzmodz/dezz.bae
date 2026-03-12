@@ -149,8 +149,10 @@ button:hover{
 <body>
 
 <div class="box">
+<p>•sᴀʏᴀ ʙᴇʀᴊᴀɴᴊɪ, sᴀʏᴀ ʙᴇʀsᴜᴍᴘᴀʜ, ᴊɪᴋᴀ sᴀʏᴀ ᴀᴍʙɪʟ ᴡᴇʙ ᴅᴇᴢᴢ sᴀʏᴀ ᴀᴋᴀɴ ᴍᴀɴᴅᴜʟ 7 ᴛᴜʀᴜɴᴀɴ, ʙᴀʟᴀ, ɢᴀɴɢᴜᴀɴ, sᴇʟᴀᴍᴀɴʏᴀ.. <br>•ᴊᴀɴɢᴀɴ ᴄᴜʀɪ ᴡᴇʙ ɪɴɪ ᴀᴛᴀᴜ sʜᴀʀᴇ ʟɪɴᴋ ᴡᴇʙɴʏᴀ. <br>• ᴊᴀɴɢᴀɴ sʜᴀʀᴇ. <br>• sᴀʏᴀ ᴅᴏᴀᴋᴀɴ, ʙᴜᴀᴛ ᴏʀᴀɴɢ ʏɢ ᴀᴍʙɪʟ ᴡᴇʙ ɪɴɪ sɪᴀᴘᴀᴘᴜɴ, sᴀʏᴀ ᴛɪᴅᴀᴋ ɪᴋʟᴀs, ʜᴀʀᴀᴍ-ᴋᴀɴ/ɴᴇʀᴀᴋᴀ ʟᴀʜ ᴅɪᴀ ʏɢ ᴍᴇɴᴄᴜʀɪ ʜᴀᴄᴋ ᴏʀᴀɴɢ ʟᴀɪɴ. <br>• ᴛᴇʀɪᴍᴀᴋᴀsɪʜ ᴏʀᴀɴɢ ʏɢ ᴜᴅᴀʜ ᴀᴍᴀɴᴀʜ,sᴏᴀᴘᴀɴ,ʜᴀᴛɪɴʏᴀ ᴘᴇɴᴜʜ ᴅᴇɴɢᴀɴ ᴋᴇsᴀʙᴀʀᴀɴ,ᴋᴇᴛᴇɴᴀɴɢᴀɴ, ᴅᴀɴ ʙᴀɪᴋ ʜᴀᴛɪ, sᴇʜᴀᴛ sᴇʟᴀʟᴜ ᴏʀᴀɴɢ ʙᴀɪᴋ. ᴄʀ~@Dezz</p>
 
 <h2>⚡ STRUK DIGITAL STORE ⚡</h2>
+
 
 <input id="nama" placeholder="Nama Pembeli">
 <input id="item" placeholder="Item/Buy/Paket">
@@ -163,16 +165,37 @@ button:hover{
 <p>Admin<p>
 <select id="admin">
 <option>DezZ</option>
+<option>AFIFSTORE</option>
 </select>
 
-<p>PILIH GAME<p>
+<p>PILIH APP<p>
 <select id="game">
 <option>Free Fire</option>
-<option>Mobile Legends</option>
+<option>ML</option>
+<option>PUBG</option>
+<option>Google</option>
+<option>Crome</option>
+<option>Browser</option>
+<option>More</option>
+<option>Whatsapp</option>
+<option>You Tobe</option>
+<option>Telegram</option>
+<option>Tik Tok</option>
+<option>Instagram</option>
+<option>Facebook</option>
 <option>-</option>
-<option>PUBG Mobile</option>
-<option>Valorant</option>
-<option>Genshin Impact</option>
+</select>
+
+
+<p>PILIH PRODUK<p>
+<select id="produk">
+<option>File Free Fire</option>
+<option>APK BAN WA</option>
+<option>-</option>
+<option>MURBUG VIP</option>
+<option>MURBAN VIP</option>
+<option>JASA UNBAN</option>
+<option>More</option>
 </select>
 
 
@@ -184,11 +207,12 @@ button:hover{
 
 <p>PILIH STATUS<p>
 <select id="status">
-<option>SUCCESS</option>
-<option>DONE</option>
+<option>SUCCESS  ☑</option>
+<option>DONE  ☑</option>
 <option>FAILED</option>
 <option>Belum Dibayar</option>
-<option>Sudah Dibayar</option>
+<option>Sudah Dibayar  ☑</option>
+<option>More</option>
 <option>-</option>
 </select>
 
@@ -268,6 +292,7 @@ const nominal1=document.getElementById("nominal1").value;
 const nominal2=document.getElementById("nominal2").value;
 const topup=document.getElementById("topup").value;
 const payment=document.getElementById("payment").value;
+const produk=document.getElementById("produk").value;
 
 if(!nama||!item){
 alert("⚠️ Lengkapi data dulu!");
@@ -277,31 +302,9 @@ return;
 const total=rupiah(nominal1);
 const harga=rupiah(nominal2);
 
-const struk=
-`  ㅤㅤ ㅤㅤ𝐒𝐄𝐓𝐑𝐔𝐊 𝐏𝐄𝐌𝐁𝐄𝐋𝐈𝐀𝐍 
-======================================
-𝙽𝚘 𝙾𝚛𝚍𝚎𝚛 : ${orderID()}
-𝚃𝚊𝚗𝚐𝚐𝚊𝚕  : ${tanggal()}
-𝙰𝙳𝙼𝙸𝙽 : ${admin} 
--------------------------------------------------
-𝙽𝚊𝚖𝚎     : ${nama}
-𝙶𝚊𝚖𝚎     : ${game}
-𝙸𝚝𝚎𝚖     : ${item} 
-𝚃𝚘𝚙 𝚄𝚙  : ${topup}
-𝙷𝚊𝚛𝚐𝚊   : ${harga}
-𝙵𝚛𝚎𝚎/𝙱𝚞𝚢 : ${freebuy} 
-𝙼𝚎𝚝𝚘𝚍𝚎 : ${payment}
----------------------------------------------------
-𝚃𝙾𝚃𝙰𝙻    : ${total}
-======================================
-𝚂𝚃𝙰𝚃𝚄𝚂  : ${status}
-======================================
-𝙻𝚒𝚗𝚔 𝙵𝚒𝚕𝚎 : ${LinkFile}
-⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊
-𝙿𝚊𝚜𝚜𝚠𝚘𝚛𝚍/𝙺𝚎𝚢 : ${Pass} 
-⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊
+/* ===== TEMPLATE DEZZ ===== */
+let footerStore = `
 ✨ Terima kasih telah berbelanja di DEZZ STORE ✨
-
 Simpan struk ini sebagai bukti transaksi resmi.
 
 Semoga harimu menyenangkan 🚀
@@ -310,8 +313,47 @@ Kami tunggu order berikutnya 🙏
         — DEZZ STORE OFFICIAL —
 `;
 
+/* ===== TEMPLATE AFIF ===== */
+if(admin === "AFIFSTORE"){
+footerStore = `
+✨ Terima kasih telah berbelanja di AFIF STORE ✨
+Simpan struk ini sebagai bukti transaksi resmi.
+
+Kami tunggu order berikutnya 🙏
+
+        — AFIF STORE OFFICIAL —
+`;
+}
+
+const struk=
+`  ㅤㅤ ㅤㅤ𝐒𝐄𝐓𝐑𝐔𝐊 𝐏𝐄𝐌𝐁𝐄𝐋𝐈𝐀𝐍 
+======================================
+𝙽𝚘 𝙾𝚛𝚍𝚎𝚛 : ${orderID()}
+𝚃𝚊𝚗𝚐𝚐𝚊𝚕  : ${tanggal()}
+𝙰𝙳𝙼𝙸𝙽 : ${admin} 
+-------------------------------------------------
+▪ 𝙽𝚊𝚖𝚎     : ${nama}
+▪ 𝙰𝚙𝚙       : ${game}
+▸ 𝙸𝚝𝚎𝚖   : ${item} 
+▸ 𝙿𝚛𝚘𝚍𝚞𝚔 : ${produk}
+▸ 𝚃𝚘𝚙 𝚄𝚙  : ${topup}
+▪ 𝙷𝚊𝚛𝚐𝚊   : ${harga}
+▪ 𝙵𝚛𝚎𝚎/𝙱𝚞𝚢 : ${freebuy} 
+▸ 𝙼𝚎𝚝𝚘𝚍𝚎 : ${payment}
+---------------------------------------------------
+𝚃𝙾𝚃𝙰𝙻    : ${total} ☑
+======================================
+𝚂𝚃𝙰𝚃𝚄𝚂  : ${status}
+======================================
+𝙻𝚒𝚗𝚔 𝙵𝚒𝚕𝚎 : ${LinkFile}
+⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊
+𝙿𝚊𝚜𝚜𝚠𝚘𝚛𝚍/𝙺𝚎𝚢 : ${Pass} 
+⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊
+${footerStore}
+`;
 
 document.getElementById("hasil").innerHTML=struk;
+
 }
 
 /* ===== COPY ===== */
